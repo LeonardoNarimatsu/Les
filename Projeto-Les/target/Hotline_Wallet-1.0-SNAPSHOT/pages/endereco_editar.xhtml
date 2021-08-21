@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+
+    <h:head>
+        <title>Editar Endereço</title>
+        <link rel="stylesheet" href="../styles/endereco-style.css"/>
+        <script src="../JS_Validation/endereco.js"/>
+    </h:head>
+
+    <h:body>
+        <header>
+            <div id="header-box">
+                <div id='search-box'>
+
+                </div>
+                <div class="logo">
+                    <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/home-page.xhtml" draggable="false">  
+                    <img src="../images/logo/hotline.png" width="250" height="250" draggable="false" ></img> 
+                    </a>
+                </div>
+
+            </div>
+                <div id="icones">
+
+                    <div class="ui-input-icon-left p-mr-2">
+                        <i class="pi pi-fw pi-search" />
+                        <p:inputText  placeholder="Pesquise Aqui..." size="40" style="height:50px;"/>
+                    </div>
+
+                    <div id="buttons-group">
+                        <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/home-page.xhtml" draggable="false">
+                            <i class="pi pi-sign-out" style="font-size: 1rem"></i></a>
+            
+                            <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/clientes.xhtml" draggable="false">
+                                <i class="pi pi-cog" style="font-size: 2rem"></i></a>
+                                
+                                    <a href="http://www.youtube.com" draggable="false">
+                                        <i class="pi pi-shopping-cart" style="font-size: 2rem"></i></a>
+                                
+                                        <a href="http://www.youtube.com" draggable="false">
+                                            <i class="pi pi-heart" style="font-size: 2rem"></i></a>
+                    </div>
+                </div>
+            
+        </header>
+        <div id="all">
+            <div id="menu">
+                <p:menubar>
+
+                    <p:menuitem value="Masculino" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-masculino.xhtml" />
+                    <p:menuitem value="Feminina" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-feminina.xhtml" />
+                    <p:menuitem value="Personalizadas" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-personalizada.xhtml" />
+                    <p:menuitem value="Carbono" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-carbono.xhtml" />
+                    <p:menuitem value="Documento" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-documento.xhtml" />
+                </p:menubar>
+            </div>
+            <div id="meio">
+                <div class="meiomenor">
+                    <center>
+                        <div class="cadastro">
+                            <table class="tabela">
+                                <tr>
+                                    <th colspan="2">
+                                        <h2>Cadastro de Endereço</h2>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        País:
+                                    </td>
+                                    <td>
+                                        Telefone de contato:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p:outputLabel for="country"/>
+                                        <p:selectOneMenu id="country" value="11">
+                                            <f:selectItem itemLabel="" itemValue="0"/>
+                                            <f:selectItem itemLabel="Estados Unidos" itemValue="1"/>
+                                            <f:selectItem itemLabel="Japão" itemValue="2"/>
+                                            <f:selectItem itemLabel="França" itemValue="3"/>
+                                            <f:selectItem itemLabel="Itália" itemValue="4"/>
+                                            <f:selectItem itemLabel="África do Sul" itemValue="5"/>
+                                            <f:selectItem itemLabel="México" itemValue="6"/>
+                                            <f:selectItem itemLabel="Argentina" itemValue="7"/>
+                                            <f:selectItem itemLabel="Canadá" itemValue="99"/>
+                                            <f:selectItem itemLabel="China" itemValue="8"/>
+                                            <f:selectItem itemLabel="Alemanha" itemValue="9"/>
+                                            <f:selectItem itemLabel="Espanha" itemValue="10"/>
+                                            <f:selectItem itemLabel="Brasil" itemValue="11"/>
+                                        </p:selectOneMenu>
+                                    </td>
+                                    <td>
+                                        <p:outputLabel for="tel"/>
+                                        <p:inputMask id="tel" style="width:140px" value="11995010203" mask="(99)99999-9999"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        CEP:
+                                    </td>
+                                    <td>
+                                        Endereco:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p:outputLabel for="cep"/>
+                                        <p:inputMask id="cep" style="width:100px" mask="99999-999" value="07500000"/>
+                                    </td>
+                                    <td>
+                                        <p:inputText id="address" style="width:200px" value="Rua Antonio"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Numero da Residência:
+                                    </td>
+                                    <td>
+                                        Complemento:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p:inputText id="house_number" style="width:60px" value="189"/>
+                                    </td>
+                                    <td>
+                                        <p:inputText id="addon_address" style="width:200px" value="A"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Bairro:
+                                    </td>
+                                    <td>
+                                        Cidade:
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p:inputText id="district" style="width:200px" value="Eldorado"/>
+                                    </td>
+                                    <td>
+                                        <p:inputText id="city" style="width:150px" value="Mogi das Cruzes"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Estado
+                                    </td>
+                                    <td>
+                                        Apelido do Endereço
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p:inputText id="state" style="width:200px" value="SP"/>
+                                    </td>
+                                    <td>
+                                        <p:inputText id="nick" style="width:200px" value="Casa"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <center>
+                                            <p:button value="Salvar Endereço" id="save" onclick="return validate()" styleClass="ui-button-raised" />
+                                        </center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div id="foot">
+                <div id="rodape">
+                    <article>
+                        <p><font size="5">Ajuda</font></p>
+                        <br /> 
+                        <font size="3" face="Arial"> Termos e Condições de Uso </font> <br />
+                        <br /> <br />
+                        <font size="3" face="Arial"> Política de Troca e Devolução </font> <br />
+                        <br /><br />
+                        <font size="3" face="Arial"> Política de Privacidade </font> <br />
+                    </article>
+                    <article>
+                        <p><font size="5">Contato</font></p>
+                        <br /> 
+                        <i class="pi pi-envelope pi-rounded" style="font-size: 12px "></i>
+                        <font size="3" face="Arial"> Email: Atendimento@Hotline.com </font> <br />
+                        <br /> <br />
+                        <i class="pi pi-phone pi-rounded" style="font-size: 12px"></i>
+                        <font size="3" face="Arial"> Telefone : (11) 3548-5434 </font> <br />
+                        <br /><br />
+                        <i class="pi pi-clock pi-rounded" style="font-size: 12px"></i>
+                        <font size="3" face="Arial"> Disponivel segunda à sexta-feira, das 09:00 às 18:00 horas </font> <br />
+                    </article>
+                    <article id="social">
+                        <p><font size="5">Social</font></p>
+                        <font size="3" face="Arial"> Nos encontre em: </font> <br />
+                        <br /> <br />
+                        <a href="http://www.youtube.com" draggable="false">
+                        <i class="pi pi-youtube pi-rounded" style="font-size: 3rem"></i></a>
+                        <a href="https://twitter.com" draggable="false">
+                        <i class="pi pi-twitter pi-rounded" style="font-size: 3rem"></i> </a>
+                        <br /><br />
+                        <a href="https://www.facebook.com" draggable="false">
+                        <i class="pi pi-facebook pi-rounded" style="font-size: 3rem"></i></a>
+                        <a href="https://www.google.com/intl/pt/gmail/about/#" draggable="false">
+                        <i class="pi pi-google pi-rounded" style="font-size: 3rem"></i></a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>

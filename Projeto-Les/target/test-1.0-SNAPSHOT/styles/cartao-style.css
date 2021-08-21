@@ -1,0 +1,196 @@
+#all {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-box {
+    padding              : 0px;
+    display              : grid;
+    grid-template-columns: auto 1fr auto;
+    align-items          : end;
+
+}
+
+#meio {
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+    text-align: center;
+}
+
+#foot {
+    border: 1px solid black;
+    margin: 1px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.rounded-button-large{ 
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+
+#search-box {
+    align-self: baseline;
+}
+
+#buttons-group {
+
+    grid-template-columns: auto auto auto;
+    grid-gap             : 3rem;
+    margin-bottom        : 1rem;
+
+}
+
+.galeria {
+    text-align      : center;
+    background-color: white;
+    padding         : 60px;
+}
+
+#menu {
+    align-self: start;
+}
+
+#rodape {
+    display        : flex;
+    justify-content: space-around;
+    color          : black;
+    text-align: left;
+    }
+
+#produtos{
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+.pi-rounded:before {
+border: 1px solid black;
+border-radius: 50%;
+padding: 5px;
+
+}
+
+.pi-youtube{
+color: red;
+padding: 0.5rem;
+}
+
+.pi-twitter{
+color: rgb(38, 155, 184);
+padding: 0.5rem;
+}
+
+.pi-facebook{
+color: rgb(28, 74, 158);
+padding: 0.5rem;
+}
+
+.pi-google{
+color: red;
+padding: 0.5rem;
+}
+
+.meiomenor{
+    width: 40%;
+    height: 80%;
+    margin-top: 5px;
+    border: 10px solid #f8f9fa;
+    border-radius: 20px;
+}
+.cadastro{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 45 15px;
+}
+.trenviar{
+    text-align: end;
+}
+.cartao{
+    margin-left:50px;
+}
+.cartao td{
+    border: 1px solid black;
+}
+#tabela {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10%;
+}
+
+#tabela td, #tabela th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tabela tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#tabela tr:hover {
+    background-color: #ddd;
+}
+
+#tabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.pi-user {
+    color : rgb(0, 0, 0);
+    margin: 12px;
+}
+
+.pi-shopping-cart {
+    color: rgb(28, 74, 158);
+    margin: 12px;
+}
+
+.pi-heart {
+    color: red;
+    margin: 12px;
+}
+
+.pi-cog {
+
+    color  : rgb(100, 91, 91);
+    padding: 0.5rem;
+}
+
+
+#icones{
+    display: grid;
+    justify-content: end;
+}
+
+#social{
+    padding: 8px;
+    text-align: center;
+}
+
+.pi-sign-out {
+
+    color: red;
+    padding: 0.5rem;
+    
+}
+
+#fonte{
+    font-size: 19;
+        
+}

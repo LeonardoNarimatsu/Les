@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+
+
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../styles/clientes-style.css"/>
+
+</h:head>
+
+<h:body>
+
+    <header>
+        <div id="header-box">
+            <div id='search-box'>
+                
+            </div>
+            <div class="logo">
+                <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/home-page.xhtml" draggable="false">  
+                <img src="../images/logo/hotline.png" width="250" height="250" draggable="false" ></img> 
+                </a>
+            </div>
+        </div>
+        <div id="icones">
+
+            <div id="buttons-group">
+    
+                    
+                <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/home-page.xhtml" draggable="false">
+                    <i class="pi pi-sign-out" style="font-size: 1rem"></i></a>
+    
+                    <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/clientes.xhtml" draggable="false">
+                        <i class="pi pi-cog" style="font-size: 2rem"></i></a>
+                        
+                            <a href="http://www.youtube.com" draggable="false">
+                                <i class="pi pi-shopping-cart" style="font-size: 2rem"></i></a>
+                        
+                                <a href="http://www.youtube.com" draggable="false">
+                                    <i class="pi pi-heart" style="font-size: 2rem"></i></a>
+    
+                    
+        
+            </div>
+
+
+        </div>
+    </header>
+
+
+
+    <div id="all">
+
+
+        <div id="menu">
+            <p:menubar>
+               <f:facet name="options">
+                    <div class="ui-input-icon-left p-mr-2">
+                        <i class="pi pi-fw pi-search" />
+                        <p:inputText placeholder="Pesquise Aqui..."/>
+                    </div>
+                </f:facet>
+                <p:menuitem value="Masculino" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-masculino.xhtml" />
+                <p:menuitem value="Feminina" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-feminina.xhtml" />
+                <p:menuitem value="Personalizadas" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-personalizada.xhtml" />
+                <p:menuitem value="Carbono" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-carbono.xhtml" />
+                <p:menuitem value="Documento" url="http://localhost:8080/test-1.0-SNAPSHOT/pages/compra-documento.xhtml" />
+            </p:menubar>
+        </div>
+        
+        
+        <div id="meio">
+            <div class="meiomenor">
+                <center>
+                    <div class="cadastro">
+                        <table class="tabela">
+                            <tr>
+                                <th colspan="2">
+                                    <h2>ATUALIZAÇÃO DE CADASTRO</h2>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Nome:
+                                </td>
+                                <td>
+                                    Sobrenome:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p:inputText value="Kayque" />
+                                </td>
+                                <td>
+                                    <p:inputText value="Rodrigues" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Data Nascimento:
+                                </td>
+                                <td>
+                                    Telefone:
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p:outputLabel for="date"/>
+                                    <p:inputMask id="date" value="17/06/2021" mask="99/99/9999"/>
+                                </td>
+                                <td>
+                                    <p:outputLabel for="phone"/>
+                                    <p:inputMask id="phone" value="(11)99510-1010" mask="(99)99999-9999"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    Gênero:
+                                </td>
+                            </tr>
+                            <tr>
+                                <p:selectOneRadio id="console" value="genero" unselectable="true">
+                                    <td>
+                                        <f:selectItem itemLabel="Masculino" itemValue="Masculino"/>
+                                    </td>
+                                    <td>
+                                        <f:selectItem itemLabel="Feminino" itemValue="Feminino"/>
+                                    </td>
+                                </p:selectOneRadio>
+                            </tr>
+                            <tr>
+                                <td class="trenviar">
+                                    <p:button value="Atualizar" styleClass="ui-button-raised" />
+                                </td>
+                                <td>
+                                    <p:button value="Inativar Conta" styleClass="ui-button-outlined ui-button-danger" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </center>
+            </div>
+            <div>
+                <table>
+
+                    <tr>
+                        <td>
+                            <p:commandButton id="basic3" value="Histórico de Transações" type="button" styleClass="ui-button-outlined ui-button-secondary"/>
+                            <p:overlayPanel for="basic3" style="width:600px" class="cartao">
+                                <table id="tabela">
+                                    <tr>
+                                      <th>Produto</th>
+                                      <th>Data de Compra</th>
+                                      <th>Valor</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Carteira Rick e Morty</td>
+                                      <td>13/08/2021</td>
+                                      <td>R$49,90</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Carteira Lacoste</td>
+                                      <td>09/06/2020</td>
+                                      <td>R$55,00</td>
+                                    </tr>
+                                </table>
+                            </p:overlayPanel>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>
+                            <p:commandButton id="basic1" value="Cartões de Créditos" type="button" styleClass="ui-button-outlined ui-button-secondary"/>
+                            <p:overlayPanel for="basic1" style="width:600px" class="cartao">
+                                <table id="tabela">
+                                    
+                                    <tr>
+                                        <th>N° do Cartão</th>
+                                        <th>Validade</th>
+                                        <th>Preferencial</th>
+                                        <th>Editar</th>
+                                        <th>Excluir</th>
+                                      </tr>
+                                      <tr>
+                                        <td>4213</td>
+                                        <td>09/27</td>
+                                        <td><input type="radio" name="fav" value="1" checked="checked"/></td>
+                                        <td><a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/cartao_editar.xhtml" draggable="false">
+                                          <i class="pi pi-pencil" style="font-size: 1rem"></i></a></td>
+                                        <td><i class="pi pi-trash"></i></td>
+                                      </tr>
+                                      <tr>
+                                        <td>0932</td>
+                                        <td>01/22</td>
+                                        <td><input type="radio" name="fav"/></td>
+                                        <td><a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/cartao_editar.xhtml" draggable="false">
+                                          <i class="pi pi-pencil" style="font-size: 1rem"></i></a></td>
+                                        <td><i class="pi pi-trash"></i></td>
+                                      </tr>
+                                </table>
+                                <p />
+                                <div class="card-group">
+
+                                    <form>
+                                        <p:button value="Adicionar um cartão" styleClass="ui-button-outlined" href="http://localhost:8080/test-1.0-SNAPSHOT/pages/cartao.xhtml"/>
+                                    </form>
+                                </div>
+                            </p:overlayPanel>
+                        </td>
+                    </tr>
+                    
+
+                    <tr>
+                        <td>
+                            <p:commandButton id="basic2" value="Endereços" type="button" styleClass="ui-button-outlined ui-button-secondary"/>
+                            <p:overlayPanel for="basic2" style="width:650px" class="endereco">
+                                <table id="tabela">
+                                    <tr>
+                                      <th>Apelido</th>
+                                      <th>Endereço</th>
+                                      <th>Bairro</th>
+                                      <th>Cidade</th>
+                                      <th>Editar</th>
+                                      <th>Excluir</th>
+                                    </tr>
+                                    <tr>
+                                      <td>Casa</td>
+                                      <td>Av. Oswaldo Cruz</td>
+                                      <td>Eldorado</td>
+                                      <td>Santa Isabel</td>
+                                      <td><a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/endereco_editar.xhtml" draggable="false">
+                                        <i class="pi pi-pencil" style="font-size: 1rem"></i></a></td>
+                                      <td><i class="pi pi-trash"></i></td>
+                                    </tr>
+                                    <tr>
+                                      <td>Trabalho</td>
+                                      <td>R. Mendes Junior</td>
+                                      <td>Vila Maria</td>
+                                      <td>São Paulo</td>
+                                      <td><a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/endereco_editar.xhtml" draggable="false">
+                                        <i class="pi pi-pencil" style="font-size: 1rem"></i></a></td>
+                                      <td><i class="pi pi-trash"></i></td>
+                                    </tr>
+                                </table>
+                                <p />
+                                <form>
+                                    <p:button value="Adicionar Endereço" styleClass="ui-button-outlined" href="http://localhost:8080/test-1.0-SNAPSHOT/pages/endereco.xhtml"/>
+                                </form>
+                            </p:overlayPanel>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p:button value="Alterar Senha" styleClass="ui-button-outlined ui-button-secondary" href="http://localhost:8080/test-1.0-SNAPSHOT/pages/senha-editar.xhtml"/>
+                                
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        
+        <div id="foot">
+
+            <div id="rodape">
+                <article>
+
+                    <p><font size="5">Ajuda</font></p>
+
+                    <br /> 
+
+
+                    <div id="fonte">
+
+                        <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/termos-de-uso.xhtml" style="color: black;" >
+                            Termos e condições de Uso
+                        </a> 
+                        
+                        <br /> <br />
+                        
+                        <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/termos-de-uso.xhtml" style="color: black;">
+                            Politicas de troca
+                        </a> 
+    
+    
+                        <br /><br />
+                        
+                        <a href="http://localhost:8080/test-1.0-SNAPSHOT/pages/termos-de-uso.xhtml" style="color: black;">
+                            Politicas de privacidade
+                        </a> 
+                    </div>
+
+
+                </article>
+
+                <article>
+
+                    <p><font size="5">Contato</font></p>
+                    <br /> 
+
+                    <i class="pi pi-envelope pi-rounded" style="font-size: 1rem "></i>
+                    <font size="3" face="Arial"> Email: Atendimento@Hotline.com </font> <br />
+
+                    <br /> <br />
+                    <i class="pi pi-phone pi-rounded" style="font-size: 1rem"></i>
+                    <font size="3" face="Arial"> Telefone : (11) 3548-5434 </font> <br />
+
+
+                    <br /><br />
+                    <i class="pi pi-clock pi-rounded" style="font-size: 1rem"></i>
+                    <font size="3" face="Arial"> Disponivel segunda à sexta-feira, das 09:00 às 18:00 horas </font> <br />
+
+
+                </article>
+
+                <article id="social">
+
+                    
+
+                    <p><font size="5">Social</font></p>
+                    
+                    <font size="3" face="Arial"> Nos encontre em: </font> <br />
+
+                    <br /> <br />
+                    <a href="http://www.youtube.com" draggable="false">
+                    <i class="pi pi-youtube pi-rounded" style="font-size: 3rem"></i></a>
+                    
+
+                    <a href="https://twitter.com" draggable="false">
+                    <i class="pi pi-twitter pi-rounded" style="font-size: 3rem"></i> </a>
+                    
+
+
+                    <br /><br />
+                    <a href="https://www.facebook.com" draggable="false">
+                    <i class="pi pi-facebook pi-rounded" style="font-size: 3rem"></i></a>
+
+                    <a href="https://www.google.com/intl/pt/gmail/about/#" draggable="false">
+                    <i class="pi pi-google pi-rounded" style="font-size: 3rem"></i></a>
+                    
+
+
+                </article>
+            </div>
+        </div>
+    </div>
+
+
+ 
+</h:body>
+
+</html>
